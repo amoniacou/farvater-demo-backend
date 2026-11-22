@@ -5,14 +5,16 @@ import (
 	"log/slog"
 	"net/http"
 	"os"
+	"strings"
 )
 
 var (
 	version  = "dev"
 	revision = "unknown"
+	features []string
 )
 
-const message = "Hello from task-4 (21:45:40)"
+const message = "Hello from the backend"
 
 func main() {
 	mux := http.NewServeMux()
@@ -23,6 +25,7 @@ func main() {
 			"version":  version,
 			"revision": revision,
 			"message":  message,
+			"features": strings.Join(features, ", "),
 		}); err != nil {
 			slog.Error("writing the version response failed", "err", err)
 		}
