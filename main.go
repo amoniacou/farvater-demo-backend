@@ -12,7 +12,7 @@ var (
 	revision = "unknown"
 )
 
-const message = "Hello from the backend"
+const message = "Hello from task-4 (21:45:40)"
 
 func main() {
 	mux := http.NewServeMux()
