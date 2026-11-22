@@ -14,7 +14,7 @@ var (
 	features []string
 )
 
-const message = "Hello from the backend"
+const message = "Hello from task-6 (11:49:48)"
 
 func main() {
 	mux := http.NewServeMux()
